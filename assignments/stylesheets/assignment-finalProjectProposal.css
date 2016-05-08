@@ -1,0 +1,49 @@
+<style>
+
+/* unvisited link */
+a:link {
+    color: orange;
+}
+
+/* visited link */
+a:visited {
+    color: orange;
+}
+
+/* mouse over link */
+a:hover {
+    color: orange;
+}
+
+/* selected link */
+a:active {
+    color: orange;
+}
+
+#header {
+    background-color:black;
+    color:orange;
+    text-align:center;
+    padding:20px;
+}
+#nav {
+    line-height:30px;
+    background-color:#6B6A6A;
+    height:300px;
+    width:150px;
+    float:left;
+    padding:5px;  
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px; 
+}
+#footer {
+    background-color:black;
+    color:orange;
+    clear:both;
+    text-align:center;
+    padding:5px; 
+}
+</style>

@@ -1,0 +1,16 @@
+body {
+	background-color:#000000;
+}
+
+div {
+    height:100%;
+    width:100%;
+    border-radius:5px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right:5px;
+}
+
+#ghost {
+    background-color:#000000;
+}
