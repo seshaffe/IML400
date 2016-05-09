@@ -1,0 +1,57 @@
+@font-face {
+	font-family: JamesFont;
+	src: url(Fonts/JamesFont.ttf);
+}
+
+body {
+	background-color: #ff661a;
+}
+
+h1 {
+	color: #000000;
+	text-align: center;
+	font-family: "JamesFont";
+	font-size: 60px;
+}
+
+a:link {
+	color: #ff661a;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #ff661a;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #ff811a;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #ff661a;
+	text-decoration: none;
+}
+
+#tiger {
+	float: right;
+	width: 1050px;
+	margin-left: -600px;
+	margin-right: 300px;
+	margin-top: -100px;
+}
+
+div {
+	float: left;
+	width: 200px;
+	padding-top: 30px;
+	padding-bottom:30px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #000000;
+	text-align: center;
+	font-family: "JamesFont";
+	font-size: 30px;
+	color: #ff661a;
+}

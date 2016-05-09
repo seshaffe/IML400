@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sarah's Movie TYGERRSSSS - Search by Genre</title>
+<link rel="stylesheet" href="Stylesheets/SearchByGenre.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+function searchRows(tblId) {
+var tbl = document.getElementById(tblId);
+var headRow = tbl.rows[0];
+var arrayOfHTxt = new Array();
+var arrayOfHtxtCellIndex = new Array();
+
+for (var v = 0; v < headRow.cells.length; v++) {
+ if (headRow.cells[v].getElementsByTagName('input')[0]) {
+ var Htxtbox = headRow.cells[v].getElementsByTagName('input')[0];
+  if (Htxtbox.value.replace(/^\s+|\s+$/g, '') != '') {
+    arrayOfHTxt.push(Htxtbox.value.replace(/^\s+|\s+$/g, ''));
+    arrayOfHtxtCellIndex.push(v);
+  }
+ }
+}
+
+for (var i = 1; i < tbl.rows.length; i++) {
+ 
+    tbl.rows[i].style.display = 'table-row';
+ 
+    for (var v = 0; v < arrayOfHTxt.length; v++) {
+ 
+        var CurCell = tbl.rows[i].cells[arrayOfHtxtCellIndex[v]];
+ 
+        var CurCont = CurCell.innerHTML.replace(/<[^>]+>/g, "");
+ 
+        var reg = new RegExp(arrayOfHTxt[v] + ".*", "i");
+ 
+        if (CurCont.match(reg) == null) {
+ 
+            tbl.rows[i].style.display = 'none';
+ 
+       }
+ 
+    }
+ 
+  }
+}
+</script>
+</head>
+
+<body>
+<a href="TYGERRSSSS_Search.html"><img src="Images/ArrowOrange.PNG" /></a>
+<h1>Search by Genre</h1>
+<table id="tblS">
+	<thead>
+	<tr>
+		<th>Title</th>
+		<th scope="col">Genre<br><input id="txtPrjName" onkeyup="searchRows('tblS')" type="text" placeholder="Genre"/></th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td><a href="101 Dalmatians - Disc One.html">101 Dalmatians<br>Disc One</a></td>
+		<td>Animation/Adventure/Comedy</td>
+	</tr>
+	<tr>
+		<td><a href="101 Dalmatians - Disc Two.html">101 Dalmatians<br>Disc Two</a></td>
+		<td>Animation/Adventure/Comedy</td>
+	</tr>
+	<tr>
+		<td><a href="101 Dalmatians II-Patch's London Adventure.html">101 Dalmatians II: Patch's London Adventure</a></td>
+		<td>Animation/Family</td>
+	</tr>
+	<tr>
+		<td><a href="1001 Classic Commercials - Disc 1.html">1001 Classic Commercials<br>Disc 1</a></td>
+		<td>Advertisement/History</td>
+	</tr>
+	<tr>
+		<td><a href="1001 Classic Commercials - Disc 2.html">1001 Classic Commercials<br>Disc 2</a></td>
+		<td>Advertisement/History</td>
+	</tr>
+	<tr>
+		<td><a href="1001 Classic Commercials - Disc 3.html">1001 Classic Commercials<br>Disc 3</a></td>
+		<td>Advertisement/History</td>
+	</tr>
+	<tr>
+		<td><a href="2001-A Space Odyssey.html">2001: A Space Odyssey</a></td>
+		<td>Mystery/Sci-Fi</td>
+	</tr>
+</tbody>
+</table>
+</body>
+
+</html>
